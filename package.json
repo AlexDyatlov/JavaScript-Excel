@@ -1,7 +1,7 @@
 {
   "name": "javascript-excel",
   "version": "1.0.0",
-  "description": "Pure Javacript Excel Application",
+  "description": "Pure JavaScript Excel Application",
   "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
