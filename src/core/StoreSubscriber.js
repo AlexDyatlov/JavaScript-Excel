@@ -4,7 +4,7 @@ export class StoreSubscriber {
   constructor(store) {
     this.store = store
     this.sub = null
-    TouchList.prevState = {}
+    this.prevState = {}
   }
 
   subscribeComponents(components) {
@@ -23,10 +23,14 @@ export class StoreSubscriber {
       })
       
       this.prevState = this.store.getState()
+
+      if (process.env.NODE_ENV === 'development') {
+        window['redux'] = this.prevState
+      }
     })
   }
 
-  unsubsribeFromStore() {
-    this.sub.unsubsribe()
+  unsubscribeFromStore() {
+    this.sub.unsubscribe()
   }
 }
