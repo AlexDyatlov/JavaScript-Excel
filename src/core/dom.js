@@ -121,7 +121,7 @@ class Dom {
   }
 }
 
-$('div').html('<h1>Test</h1>').clear()
+// $('div').html('<h1>Test</h1>').clear()
 
 // event.raget
 export function $(selector) {
